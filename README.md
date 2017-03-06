@@ -16,7 +16,7 @@ PHP >= 7.0
 Via Composer
 
 ``` bash
-$ composer require :uvinum/:zipcode-validator
+$ composer require uvinum/zipcode-validator
 ```
 
 ## Usage
