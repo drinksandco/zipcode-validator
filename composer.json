@@ -1,5 +1,5 @@
 {
-    "name": "uvinum/ZipCodeValidator",
+    "name": "uvinum/zipcodevalidator",
     "type": "library",
     "description": "Library to validate worldwide zipcodes",
     "homepage": "https://www.uvinum.es",
