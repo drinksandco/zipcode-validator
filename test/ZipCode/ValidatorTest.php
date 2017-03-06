@@ -1013,7 +1013,8 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
             ["GB", "sso 9la"],
             ["GB", "FY 8 4PL"],
             ["GB", "FU3 3AP"],
-            ["PT", "6350"]
+            ["PT", "6350"],
+            ["ES", "635089"],
         ];
     }
 
