@@ -1,0 +1,63 @@
+{
+    "name": "uvinum/ZipCodeValidator",
+    "type": "library",
+    "description": "Library to validate worldwide zipcodes",
+    "homepage": "https://www.uvinum.es",
+    "keywords": [
+        "zipcode",
+        "validator"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduard Fabra",
+            "email": "eduard.fabra@uvinum.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Dani Madurell",
+            "email": "daniel.madurell@uvinum.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Xavi Serrat",
+            "email": "xavi.serrat@uvinum.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Albert García",
+            "email": "albert.garcia@uvinum.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Sandra Castro",
+            "email": "sandra.castro@uvinum.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Marcos Segovia",
+            "email": "marcos.segovia@uvinum.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uvinum\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Uvinum\\Tests\\": "test"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable"
+}
