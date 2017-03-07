@@ -186,7 +186,15 @@ final class Validator
         'ZM' => '\\d{5}',
     ];
 
-    public function validate(string $a_country_iso_code, string $a_zip_code): bool
+    /**
+     *
+     *
+     * @param string $a_country_iso_code
+     * @param string $a_zip_code
+     *
+     * @return bool
+     */
+    public function validate($a_country_iso_code, $a_zip_code)
     {
         if ($this->notHavePatternToValidateZipCodeForThisCountry($a_country_iso_code))
         {
@@ -196,15 +204,29 @@ final class Validator
         }
         $pattern = $this->getPatternToValidateZipCodeForThisCountry($a_country_iso_code);
 
-        return preg_match("/^{$pattern}$/i", $a_zip_code);
+        return (bool) preg_match("/^{$pattern}$/i", $a_zip_code);
     }
 
-    private function notHavePatternToValidateZipCodeForThisCountry(string $a_country_iso_code): bool
+    /**
+     *
+     *
+     * @param string $a_country_iso_code
+     *
+     * @return bool
+     */
+    private function notHavePatternToValidateZipCodeForThisCountry($a_country_iso_code)
     {
         return !array_key_exists($a_country_iso_code, $this->zip_code_patterns_by_country);
     }
 
-    private function getPatternToValidateZipCodeForThisCountry(string $country_iso_code): string
+    /**
+     *
+     *
+     * @param string $country_iso_code
+     *
+     * @return array
+     */
+    private function getPatternToValidateZipCodeForThisCountry($country_iso_code)
     {
         return $this->zip_code_patterns_by_country[$country_iso_code];
     }

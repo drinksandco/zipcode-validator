@@ -8,7 +8,7 @@ A PHP library that provides zip code validation for many countries.
 
 ## Prerequisites
 
-PHP >= 7.0
+PHP >= 5.4
 
 
 ## Install
@@ -16,7 +16,7 @@ PHP >= 7.0
 Via Composer
 
 ``` bash
-$ composer require uvinum/zipcode-validator
+$ composer require uvinum/zipcodevalidator
 ```
 
 ## Usage
