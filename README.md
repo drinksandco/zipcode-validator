@@ -29,7 +29,7 @@ $zip_code_validator->validate($a_country_iso_code, $a_zip_code);
 
 ## Change log
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/uvinum/zipcode-validator/releases) for more information what has changed recently.
 
 ## Testing
 
@@ -39,11 +39,11 @@ $ composer test
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/uvinum/zipcode-validator/tags). 
 
 ## Acknowledgments
 
@@ -59,4 +59,4 @@ If you discover any security related issues, please email developers at uvinum.c
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
