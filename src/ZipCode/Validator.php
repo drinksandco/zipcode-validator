@@ -187,8 +187,6 @@ final class Validator
     ];
 
     /**
-     *
-     *
      * @param string $a_country_iso_code
      * @param string $a_zip_code
      *
@@ -208,8 +206,6 @@ final class Validator
     }
 
     /**
-     *
-     *
      * @param string $a_country_iso_code
      *
      * @return bool
@@ -220,8 +216,6 @@ final class Validator
     }
 
     /**
-     *
-     *
      * @param string $country_iso_code
      *
      * @return array
