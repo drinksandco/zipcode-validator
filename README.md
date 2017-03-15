@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/uvinum/zipcode-validator.svg?branch=master)](https://travis-ci.org/uvinum/zipcode-validator)
 
 
-A PHP library that provides zip code validation for many countries.
+A PHP library that provides zip code validation for many countries. Ready for production use.
 
 ## Prerequisites
 
