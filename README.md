@@ -2,6 +2,7 @@
 [![Latest Stable Version](https://poser.pugx.org/uvinum/zipcodevalidator/v/stable)](https://packagist.org/packages/uvinum/zipcodevalidator)
 [![License](https://poser.pugx.org/uvinum/zipcodevalidator/license)](https://packagist.org/packages/uvinum/zipcodevalidator)
 [![Build Status](https://travis-ci.org/uvinum/zipcode-validator.svg?branch=master)](https://travis-ci.org/uvinum/zipcode-validator)
+[![Total Downloads](https://poser.pugx.org/uvinum/zipcodevalidator/downloads)](https://packagist.org/packages/uvinum/zipcodevalidator)
 
 
 A PHP library that provides zip code validation for many countries. Ready for production use.
