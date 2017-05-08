@@ -5,7 +5,7 @@ namespace Uvinum\ZipCode;
 final class Validator
 {
     /** @var array */
-    private $zip_code_patterns_by_country = [
+    private static $zip_code_patterns_by_country = [
         'AC' => 'ASCN 1ZZ',
         'AD' => 'AD[1-7]0\\d',
         'AF' => '\\d{4}',
@@ -194,13 +194,26 @@ final class Validator
      */
     public function validate($a_country_iso_code, $a_zip_code)
     {
-        if ($this->notHavePatternToValidateZipCodeForThisCountry($a_country_iso_code))
+        if (self::notHavePatternToValidateZipCodeForThisCountry($a_country_iso_code))
         {
             throw new \InvalidArgumentException(
                 'Not have pattern to validate "' . $a_country_iso_code . '" zip codes, or "' . $a_country_iso_code . '" is not a valid ISO 3166-1 CODE '
             );
         }
-        $pattern = $this->getPatternToValidateZipCodeForThisCountry($a_country_iso_code);
+        $pattern = self::getPatternToValidateZipCodeForThisCountry($a_country_iso_code);
+
+        return (bool) preg_match("/^{$pattern}$/i", $a_zip_code);
+    }
+
+    public static function _validate($a_country_iso_code, $a_zip_code)
+    {
+        if (self::notHavePatternToValidateZipCodeForThisCountry($a_country_iso_code))
+        {
+            throw new \InvalidArgumentException(
+                'Not have pattern to validate "' . $a_country_iso_code . '" zip codes, or "' . $a_country_iso_code . '" is not a valid ISO 3166-1 CODE.'
+            );
+        }
+        $pattern = self::getPatternToValidateZipCodeForThisCountry($a_country_iso_code);
 
         return (bool) preg_match("/^{$pattern}$/i", $a_zip_code);
     }
@@ -210,9 +223,9 @@ final class Validator
      *
      * @return bool
      */
-    private function notHavePatternToValidateZipCodeForThisCountry($a_country_iso_code)
+    private static function notHavePatternToValidateZipCodeForThisCountry($a_country_iso_code)
     {
-        return !array_key_exists($a_country_iso_code, $this->zip_code_patterns_by_country);
+        return !array_key_exists($a_country_iso_code, self::$zip_code_patterns_by_country);
     }
 
     /**
@@ -220,8 +233,8 @@ final class Validator
      *
      * @return array
      */
-    private function getPatternToValidateZipCodeForThisCountry($country_iso_code)
+    private static function getPatternToValidateZipCodeForThisCountry($country_iso_code)
     {
-        return $this->zip_code_patterns_by_country[$country_iso_code];
+        return self::$zip_code_patterns_by_country[$country_iso_code];
     }
 }
